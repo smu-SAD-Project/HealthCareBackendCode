@@ -34,4 +34,9 @@ public class EventController {
         return eventService.getAllEvents();
     }
 
+    @DeleteMapping("/{eventId}")
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteEvent(@PathVariable Long eventId) {
+        eventService.deleteEvent(eventId);
+    }
 }
