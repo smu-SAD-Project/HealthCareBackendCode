@@ -9,4 +9,8 @@ public interface DoctorService {
     List<DoctorDTO> getAllDoctors();
 
     Long addDoctor(DoctorDTO dr);
+
+    DoctorDTO getDoctor(Long id);
+
+    void deleteDoctor(Long id);
 }

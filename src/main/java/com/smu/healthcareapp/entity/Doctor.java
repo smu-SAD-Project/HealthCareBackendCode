@@ -17,66 +17,90 @@ public class Doctor implements Serializable {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     public Long id;
 
-    @Column
-    public String name;
+    //fname, lname, phone, email, address, speciality, description
 
     @Column
-    public String image;
+    public String fname;
 
     @Column
-    public String specialisedArea;
+    public String lname;
 
     @Column
-    public String rating;
+    public String phone;
 
     @Column
-    public String distance;
+    public String email;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @Column
+    public String address;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    @Column
+    public String speciality;
 
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public void setSpecialisedArea(String specialisedArea) {
-        this.specialisedArea = specialisedArea;
-    }
-
-    public void setRating(String rating) {
-        this.rating = rating;
-    }
-
-    public void setDistance(String distance) {
-        this.distance = distance;
-    }
+    @Column
+    public String description;
 
     public Long getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getFname() {
+        return fname;
     }
 
-    public String getImage() {
-        return image;
+    public String getLname() {
+        return lname;
     }
 
-    public String getSpecialisedArea() {
-        return specialisedArea;
+    public String getPhone() {
+        return phone;
     }
 
-    public String getRating() {
-        return rating;
+    public String getEmail() {
+        return email;
     }
 
-    public String getDistance() {
-        return distance;
+    public String getAddress() {
+        return address;
+    }
+
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setFname(String fname) {
+        this.fname = fname;
+    }
+
+    public void setLname(String lname) {
+        this.lname = lname;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

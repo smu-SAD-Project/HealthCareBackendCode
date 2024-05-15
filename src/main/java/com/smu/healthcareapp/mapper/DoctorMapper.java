@@ -14,4 +14,7 @@ public interface DoctorMapper {
 
    @Mapping(target = "id", ignore = true)
    Doctor doctorDTOtoDoctor(DoctorDTO doctorDTO);
+
+   @Mapping(target = "id", ignore = true)
+   DoctorDTO doctorToDoctorDTO(Doctor doctor);
 }

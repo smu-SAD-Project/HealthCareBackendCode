@@ -1,6 +1,7 @@
 package com.smu.healthcareapp.controller;
 
 import com.smu.healthcareapp.dto.DoctorDTO;
+import com.smu.healthcareapp.entity.Doctor;
 import com.smu.healthcareapp.service.DoctorService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -24,9 +25,17 @@ public class DoctorController {
         return doctorService.getAllDoctors();
     }
 
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public DoctorDTO getDoctor(@PathVariable Long id) { return doctorService.getDoctor(id);}
+
     @PostMapping
     @ResponseStatus(HttpStatus.OK)
     public long addDoctor(@RequestBody DoctorDTO dr) {
         return  doctorService.addDoctor(dr);
     }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteEvent(@PathVariable Long id) {  doctorService.deleteDoctor(id); }
 }
